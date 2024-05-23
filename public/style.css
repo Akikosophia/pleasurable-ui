@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profielen pagina */
+
+h1.welkom-tekst {
+    margin-left: 3.8em;
+    margin-top: 2.5em;
+}
+
+ .profielen-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 10px 0;
+    margin-left: 6em;
+    margin-top: 3em;
+    border-radius: 10px;
+
+} 
+
+.profielen {
+    border-radius: 10px;
+    padding: 2em; 
+    background-color: white;
+    width: 12em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 2.5em;
+} 
+
+
+.profiel-namen {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em; 
+}
+
+img.profile-avatars {
+    border-radius: 50%;
+    object-fit: contain;
+    height: 8em;
+  
+}
+
+details {
+    margin-left: -1em;
+    padding: 0.2em;
+}  

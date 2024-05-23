@@ -1,0 +1,43 @@
+<%- include('./partials/head') %>
+
+
+    <main>
+
+        
+        <h1 class="welkom-tekst"> Welkom Akiko</h1>
+        <article class="profielen-container">
+            <% profiles.forEach(profile=> { %>
+                <article class="profielen">
+                    <a href="./index/<%= profile.id %>" class="profile-text">
+                        <% if (profile.avatar) { %>
+                            <img src="https://fdnd-agency.directus.app/assets/<%= profile.avatar %>"
+                                class="profile-avatars" alt="">
+                            <div class="profiel-namen">
+                                <%= profile.name %>
+                    </a>
+                    </div>
+                    <details>
+                        <summary>Gegevens</summary>
+                        <div>adres</div>
+                    </details>
+                    <details>
+                        <summary>Beschikbaarheid</summary>
+                        <div>Boek</div>
+                    </details>
+                    <details>
+                        <summary>Abonnement</summary>
+                        <div>Type abonnement
+                            <div>Lidnummer</div>
+                        </div>
+                    </details>
+          
+                    <% } %>
+                </article>
+                <% }) %>
+
+
+        </article>
+
+    </main>
+
+    <%- include('./partials/foot') %>
