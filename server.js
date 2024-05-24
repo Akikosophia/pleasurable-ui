@@ -29,22 +29,44 @@ const apiUrl = 'https://fdnd-agency.directus.app/items/oba_item'
 
 const apiItem = (apiUrl + 'oba_item')
 
+
+
 // Home pagina
 app.get('/', function(request, response) {
-    console.log(savedItems)
+    // console.log(savedItems)
     fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((items) => {
-        response.render('index', {           
+        response.render('home', {           
             items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
             // savedItems: savedItems
         })
     });
 })
 
-// Hier moet de rest van de GET, POST en ROUTE komen
-app.get()
+app.get('/profielen', function(request, response) {
+    // console.log(savedItems)
+    fetchJson('https://fdnd-agency.directus.app/items/oba_items').then((items) => {
+        response.render('profielen', {           
+            items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
+            // savedItems: savedItems
+        })
+    });
+})
+
+app.get('/profiel', function(request, response) {
+    // console.log(savedItems)
+    fetchJson('https://fdnd-agency.directus.app/items/oba_items').then((items) => {
+        response.render('profiel', {           
+            items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
+            // savedItems: savedItems
+        })
+    });
+})
+
+
+
 
 // Stel het poortnummer in waar express op moet gaan luisteren
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 8001)
 
 // Start express op, haal daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
