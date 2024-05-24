@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+
+<div class="container">
+    <h2>Betalingen</h2>
+    <h3>U heeft 3 betalingen:</h3>
+    <% items.forEach(item=> { %>
+        <article>
+            <img src="https://fdnd-agency.directus.app/assets/<%= item.afbeelding %>" alt="">
+            <p>U bent 3 dagen laat voor inleveren</p>
+            <p>Betaal binnen 1 week om te voorkomen dat er meer kosten bij komen!!</p>
+
+            <form action="/betalingen" method="post" name="betalingen">
+                <input type="hidden" name="itemId" value="<%= item.id %>">
+                <div>
+                    <label for="kosten">Kosten:</label>
+                    <input type="text" id="kosten" name="kosten" value="2 Euro" readonly>
+                </div>
+                <button type="submit">Betaal</button>
+            </form>
+
+        </article>
+        <% }) %>
+
+</div>
+
+<%- include('./partials/foot') %>
