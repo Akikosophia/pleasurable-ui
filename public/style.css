@@ -45,14 +45,106 @@ main.dark {
     --text-color-body :#000;
 }
 
+main {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: 'Avenir';
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
 
 
- 
-   
-/* img {
+section {
+    position: relative;
+}
+
+.overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* OBA LOGO */
+
+
+/* PROFIEL PAGINA */
+
+h2.naam {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.persoonlijke-informatie {
+    list-style: none;
+    margin-top: 1em;
+}
+
+
+/* Profielen pagina */
+
+
+h1.welkom-tekst {
+    margin-left: 3.8em;
+    margin-top: 2.5em;
+}
+
+ .profielen-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 10px 0;
+    margin-left: 6em;
+    margin-top: 3em;
+    border-radius: 10px;
+
+} 
+
+.profielen {
+    border-radius: 10px;
+    padding: 2em; 
+    background-color: var(--sidebar-color);
+    width: 12em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 2.5em;
+} 
+
+
+.profiel-namen {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em; 
+}
+
+details {
+    margin-left: -1em;
+    padding: 0.2em;
+}  
+
+
+img.profiel-avatars {
+    border-radius: 50%;
     object-fit: cover;
-  
-} */
+    height: 120px;
+    width: 120px;
+    margin-left: auto;
+}
+
+
+img  {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
 
 /* SIDE BAR */
 
@@ -373,71 +465,3 @@ color: var(--text-color);
 }
 
 
-/* OBA LOGO */
-
-.oba-logo { 
-    position: absolute;
-    left: 110px;
-    margin-top: 1em;  
-    margin-bottom: 3em; 
-    width: 3.5em;
-    transition: 0.5s ease-in-out;  
-}
-
-.oba-logo:hover { 
-    transform: scale(1.2);
-}
-
-/* Profielen pagina */
-
-
-h1.welkom-tekst {
-    margin-left: 3.8em;
-    margin-top: 2.5em;
-}
-
- .profielen-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 10px 10px 0;
-    margin-left: 6em;
-    margin-top: 3em;
-    border-radius: 10px;
-
-} 
-
-.profielen {
-    border-radius: 10px;
-    padding: 2em; 
-    background-color:grey;
-    width: 12em;
-    margin-bottom: 2em;
-    margin-left: 1em;
-    margin-right: 2.5em;
-} 
-
-
-.profiel-namen {
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em; 
-}
-
-img.profiel-avatars {
-    border-radius: 50%;
-    object-fit: contain;
-    height: 8em;
-  
-}
-
-details {
-    margin-left: -1em;
-    padding: 0.2em;
-}  
-
-img  {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
