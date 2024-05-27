@@ -31,17 +31,24 @@ const apiItem = (apiUrl + 'oba_item')
 
 // Home pagina
 app.get('/', function(request, response) {
-    console.log(savedItems)
+    // console.log(savedItems)
     fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((items) => {
-        response.render('index', {           
-            items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
+        response.render('home', {           
+            // items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
             // savedItems: savedItems
         })
     });
 })
 
 // Hier moet de rest van de GET, POST en ROUTE komen
-app.get()
+app.get('/uitleningen', function(request, response){
+    console.log()
+    fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((itemsDataUitDeAPI) => {
+        response.render('uitleningen', {
+            items: itemsDataUitDeAPI.data[0]
+        })
+    })
+})
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
