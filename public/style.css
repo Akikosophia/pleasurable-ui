@@ -88,11 +88,61 @@ h2.naam {
     margin-top: 1em;
 }
 
+@media (min-width:375px) {
+ 
+    article.profielen {
+       width: 15.5em;
+       margin-left: 1.5em;
+   }
+
+
+   img.profiel-avatars {
+    margin-left: 2.5em;
+   }
+   
+}
 
 /* Profielen pagina */
 
+svg {
+    border-radius: 50%;
+    border: 1.5px solid var(--text-color);
+    width:30px;
+    height:30px;
+    padding: 4px;
+}
 
-h1.welkom-tekst {
+.stroke {
+    border: 1.5px solid var(--text-color);
+}
+
+details.bell {
+    /* background-color: var(--primary-color-light); */
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: inherit;
+}
+
+img.boek-maneko {
+    object-fit: contain;
+}
+
+details.bell[open] {
+   width: 100%;
+   /* background-color: var(--text-color); */
+}
+
+summary.test {
+    list-style: none;
+}
+
+.bell-content {
+    display: flex;
+    flex-direction: row;
+}
+
+h1.welkom-tekst { 
     margin-left: 3.8em;
     margin-top: 2.5em;
 }
@@ -115,6 +165,7 @@ h1.welkom-tekst {
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 2.5em;
+    position: relative;
 } 
 
 
@@ -130,17 +181,16 @@ details {
 }  
 
 
-img.profiel-avatars {
+img.profile-avatars {
     border-radius: 50%;
     object-fit: cover;
     height: 120px;
     width: 120px;
-    margin-left: auto;
+    margin-left: 2em;
 }
 
 
 img  {
-    border-radius: 50%;
     width: 80px;
     height: 80px;
     object-fit: cover;
