@@ -28,14 +28,14 @@ const apiFamily = 'https://fdnd-agency.directus.app/items/oba_family'
 const apiUrl = 'https://fdnd-agency.directus.app/items/oba_item'
 
 const apiItem = (apiUrl + 'oba_item')
+const apiProfile = apiUrl + 'oba_profile'
 
 // Home pagina
 app.get('/', function(request, response) {
     // console.log(savedItems)
     fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((items) => {
         response.render('home', {           
-            // items: items.data, /*hier zeg ik dat iedereen getoond moet worden*/
-            // savedItems: savedItems
+
         })
     });
 })
@@ -76,6 +76,27 @@ app.get('/favorieten', function(request, response){
     })
 })
 
+// Profielen pagina
+app.get('/profielen', function(request, response) {
+    // console.log(savedItems)
+    fetchJson('https://fdnd-agency.directus.app/items/oba_profile').then((profiles) => {
+        response.render('profielen', {           
+            profiles: profiles.data
+        })
+    });
+})
+
+// Profiel pagina
+app.get('/profiel', function(request, response) {
+    // console.log(savedItems)
+    fetchJson('https://fdnd-agency.directus.app/items/oba_profile').then((items) => {
+        response.render('profiel', {  
+            profiles: profiles.data,     
+             /*hier zeg ik dat iedereen getoond moet worden*/
+            // savedItems: savedItems
+        })
+    });
+})
 
 // Uitleningen pagina
 app.get('/uitleningen', function(request, response){
