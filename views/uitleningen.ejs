@@ -5,15 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Uitleningen</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!--    font link       -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet"> 
 
 </head>
 
 <body>
+    <%- include('partials/head')%>
     <section class="">
         <article>
             <img aria-label="parcour" src="https://fdnd-agency.directus.app/assets/<%= items.afbeelding %>" alt="<% items.title %> cover" height="200" width="150">
@@ -49,17 +52,20 @@
 
     <style>
         body {
-            background-color: rgb(225, 225, 224);
+            background-color: rgb 150/150/150;
         }
 
         section {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 1.5em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1em;
+            margin: auto;
+            width: 70%;
         }
 
         article {
+            padding-top: 10px;
             border-radius: 35px;
             width: 400px;
             height: 300px;
@@ -76,7 +82,6 @@
             margin: 20px;
             margin-left: 40px;
             padding-bottom: 0px;
-
             border-radius: 15px;
         }
 
@@ -85,6 +90,7 @@
             grid-row: 1 / 2;
         
             margin: 10px, 20px, 5px, 5px;
+            padding-right: 10px;
             font-size: 20px;
         }
 
@@ -114,19 +120,18 @@
 /* Elke +1 op img komt met een delay van X seconde */
 
 
-@keyframes slide-in-left {
-  0% {
-            transform: translateX(-1000px);
-        opacity: 0;
-  }
-  100% {
-            transform: translateX(0);
-            opacity: 1;
-  }
-}
+        @keyframes slide-in-left {
+        0% {
+                    transform: translateX(-1000px);
+                opacity: 0;
+        }
+        100% {
+                    transform: translateX(0);
+                    opacity: 1;
+        }
+        }
 
-        img:hover{
-            
+        img:hover{            
             transform: scale(1);
             animation-name: jump;
             animation-duration: 3s;
