@@ -14,52 +14,57 @@
                 <div class="profiel-name">
                 </div> -->
 
-                <article class="profielen-container">
-                    <% profiles.forEach(profile=> { %>
-                        <article class="profielen">
- 
-                            <details class="bell">
-                                <summary class="test">
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 
-                                </summary>
-                                <div class="bell-content">
-                                  <img src="/assets/Scherm_afbeelding 2024-03-06 om 12.16.07.png" class="boek-maneko" alt="boek-maneko">
-                               <h2 class="titel-boek">Maneko
-                               </h2>
+        <article class="profielen-container">
+            <% profiles.forEach(profile=> { %>
+                <article class="profielen">
+
+                    <details class="bell">
+                        <summary class="test">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="custom-bell">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                        </summary>
+                        <h3 class="details-titel">Boek beschikbaar</h3>
+                        <div class="bell-content">
+                            <img src="/assets/Scherm_afbeelding 2024-03-06 om 12.16.07.png" class="boek-maneko"
+                                alt="boek-maneko">
+                            <p class="titel-boek"> Maneki neko
+                            </p>
+                        </div>
+                    </details>
+
+
+                    <a href="./index/<%= profile.id %>" class="profile-text"></a>
+                    <% if (profile.avatar) { %>
+                            <img src="https://fdnd-agency.directus.app/assets/<%= profile.avatar %>"
+                                class="profile-avatars" alt="">
+                        <div class="profiel-namen">
+                            <%= profile.name %>
+                        </div>
+
+                        <details>
+                            <summary>Gegevens</summary>
+                            <div>adres</div>
+                        </details>
+                        <details>
+                            <summary>Boetes</summary>
+                            <div>Boete 1 euro</div>
+                        </details>
+                        <details>
+                            <summary>Abonnement</summary>
+                            <div>Type abonnement
+                                <div>Lidnummer</div>
                             </div>
-                            </details>
-                                
-                            
-                            <a href="./index/<%= profile.id %>" class="profile-text"></a>
-                                <% if (profile.avatar) { %>
-                                    <img src="https://fdnd-agency.directus.app/assets/<%= profile.avatar %>"
-                                        class="profile-avatars" alt=""> 
-                                         <div class="profile-name">
-                                           <%= profile.name %>
-                                        </div>
+                        </details>
 
-                                    
+                        <a href="/profiel" class="profiel-button"> profiel </a>
 
-                <details>
-                    <summary>Gegevens</summary>
-                    <div>adres</div>
-                </details>
-                <details>
-                    <summary>Beschikbaarheid</summary>
-                    <div>Boek</div>
-                </details>
-                <details>
-                    <summary>Abonnement</summary>
-                    <div>Type abonnement
-                        <div>Lidnummer</div>
-                    </div>
-                </details>
-
-                <a href="/profiel" class="back"> profiel </a>
-
-                <% } %>
-            </article>
-            <% }) %>
+                        <% } %>
+                </article>
+                <% }) %>
 
 
 

@@ -23,6 +23,7 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --bell-color: rgb(255,160,0);
     
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -78,6 +79,13 @@ section {
 
 /* PROFIEL PAGINA */
 
+img.profiel-img {
+   margin-left: 2em;
+   border-radius: 50%;
+   height: 120px;
+   width: 120px;
+}
+
 h2.naam {
     margin-top: 0.5em;
     text-align: center;
@@ -104,20 +112,169 @@ h2.naam {
 
 /* Profielen pagina */
 
-svg {
+.profiel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .3em .6em;
+    border: 2px solid var(--primary-color);
+    border-radius: .5rem;
+    background: none;
+    color: var(--primary-color);
+    cursor: pointer;  
+    margin-top: 1em;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.profiel-button:hover {
+    background: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+.profiel-button:active {
+    background: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+svg.custom-bell {
     border-radius: 50%;
     border: 1.5px solid var(--text-color);
     width:30px;
     height:30px;
     padding: 4px;
+    margin-right:3px;
+    margin-top: 3px;
 }
 
-.stroke {
-    border: 1.5px solid var(--text-color);
+svg.custom-bell:hover {
+    border-radius: 50%;
+    border: 1.5px solid var(--bell-color);
+    fill: var(--bell-color);
+    stroke: var(--bell-color);
+    animation-iteration-count: 3;
+    -webkit-animation: shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+svg.custom-bell:active {
+    border-radius: 50%;
+    border: 1.5px solid var(--bell-color);
+    fill: var(--bell-color);
+    stroke: var(--bell-color);
+    animation-iteration-count: 3;
+    -webkit-animation: shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 0;
+              transform-origin: 50% 0;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }
+  @keyframes shake-top {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 0;
+              transform-origin: 50% 0;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  } 
+
+  .jump {
+    animation-name: jump;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    animation-duration: 1.2s;
+    animation-iteration-count: 2;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
+    }
+    50% {
+      transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+      transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
+    }
+    64% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }
+
+
+.details-titel {
+    border-bottom: 1px solid var(--text-color);
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 4px;
 }
 
 details.bell {
-    /* background-color: var(--primary-color-light); */
+    background-color: var(--sidebar-color);
     position: absolute;
     top: 0;
     right: 0;
@@ -126,13 +283,28 @@ details.bell {
 
 img.boek-maneko {
     object-fit: contain;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+
+.titel-boek {
+    margin-top: 7px;
+    margin-right: 3px;
+    font-weight: bold;
 }
 
 details.bell[open] {
    width: 100%;
-   /* background-color: var(--text-color); */
+   height: 42%;
+   background-color: var(--sidebar-color);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+details[open] .custom-bell {
+    position: absolute;
+    right: 0;
+}
+  
 summary.test {
     list-style: none;
 }
@@ -154,7 +326,6 @@ h1.welkom-tekst {
     margin-left: 6em;
     margin-top: 3em;
     border-radius: 10px;
-
 } 
 
 .profielen {
@@ -166,20 +337,24 @@ h1.welkom-tekst {
     margin-left: 1em;
     margin-right: 2.5em;
     position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 1s;
 } 
 
+.profielen:hover {
+    scale: 1.1;
+} 
 
 .profiel-namen {
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em; 
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; 
 }
 
 details {
     margin-left: -1em;
     padding: 0.2em;
 }  
-
 
 img.profile-avatars {
     border-radius: 50%;
@@ -188,7 +363,6 @@ img.profile-avatars {
     width: 120px;
     margin-left: 2em;
 }
-
 
 img  {
     width: 80px;
