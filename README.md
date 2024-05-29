@@ -1,7 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# OBA
+OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende dingen lenen zoals boeken, activiteiten en cd's. Op locatie is er een studeer plek en ook de ruimte om een leesclub te organiseren. Ook kun je bronnen van de OBA gebruiken zoals informatiebestanden, catalogi's, oefenprogramma's en websites. 
+
 
 ## Inhoudsopgave
 
