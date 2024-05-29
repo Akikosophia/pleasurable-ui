@@ -3,6 +3,7 @@
 # OBA
 OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende dingen lenen zoals boeken, activiteiten en cd's. Op locatie is er een studeer plek en ook de ruimte om een leesclub te organiseren. Ook kun je bronnen van de OBA gebruiken zoals informatiebestanden, catalogi's, oefenprogramma's en websites. 
 
+Onze opdrachtgever voor Oba is Mark Vos
 
 ## Inhoudsopgave
 
@@ -17,6 +18,7 @@ OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende ding
   * [Betalingen pagina Abeer](#Betalingenpagina)
 
 ## Beschrijving
+De opdracht is om de website pleasurable te maken
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
