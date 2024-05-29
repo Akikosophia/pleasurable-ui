@@ -12,9 +12,9 @@ OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende ding
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
-  * [Profielen pagina] (#Akiko)
-  * [Uitlegingen pagina] (#Inez)
-  * [Betalingen pagina] (#Inez)
+  * [Profielen pagina](#Akiko)
+  * [Uitlegingen pagina](#Inez)
+  * [Betalingen pagina](#Inez)
 
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
@@ -31,6 +31,8 @@ OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende ding
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
 ## Bronnen
+
+## Profielen pagina
 
 ## Licentie
 
