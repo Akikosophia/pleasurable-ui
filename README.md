@@ -33,6 +33,7 @@ OBA staat voor Openbare Bibliotheek Amsterdam. Bij OBA kan je verschillende ding
 ## Bronnen
 
 ## Profielen pagina
+Ik heb hier een link gemaakt naar mijn wiki paginahttps://github.com/Akikosophia/pleasurable-ui/wiki/Week-3#akiko---profielen-pagina
 
 ## Licentie
 
