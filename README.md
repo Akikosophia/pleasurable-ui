@@ -35,7 +35,7 @@ De opdracht is om de website pleasurable te maken
 ## Bronnen
 
 ## Profielen pagina
-Ik heb hier een link gemaakt naar mijn wiki pagina https://github.com/Akikosophia/pleasurable-ui/wiki/Week-3#akiko---profielen-pagina
+Ik heb hier een link gemaakt naar mijn wiki pagina 
 
 ## Licentie
 
