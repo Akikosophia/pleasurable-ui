@@ -27,6 +27,7 @@ De gebruiker wil in een opslag wat informatie kunnen zien van de familie leden.
 *Beschikbaarheid van het boek.
 *De informatie moet ook in en uitgeklapt kunnen worden
 
+Screenshots
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
