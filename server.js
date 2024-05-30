@@ -43,9 +43,9 @@ app.get('/', function(request, response) {
 // Hier moet de rest van de GET, POST en ROUTE komen
 app.get('/uitleningen', function(request, response){
     console.log()
-    fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((itemsDataUitDeAPI) => {
+    fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((items) => {
         response.render('uitleningen', {
-            items: itemsDataUitDeAPI.data[0]
+            items: items.data
         })
     })
 })
