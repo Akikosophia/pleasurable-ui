@@ -27,10 +27,10 @@ De gebruiker wil in een opslag wat informatie kunnen zien van de familie leden.
 * Beschikbaarheid van het boek.
 * De informatie moet ook in en uitgeklapt kunnen worden
 
-## Profielen pagina
+## Profielen pagina Akiko
 Ik heb hier een link gemaakt naar mijn wiki pagina 
 
-## Screenshots Profielen pagina
+## Screenshots Profielen pagina Akiko
 
 ### Hover state notificatie bel (hij beweegt ook bij de hover state)
 <img width="378" alt="Scherm­afbeelding 2024-05-29 om 14 48 27" src="https://github.com/Akikosophia/pleasurable-ui/assets/144008863/b16dcd37-a810-4b27-9ddc-8641cdd353b8">
