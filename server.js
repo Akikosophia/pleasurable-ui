@@ -29,6 +29,8 @@ const apiUrl = 'https://fdnd-agency.directus.app/items/oba_item'
  
 const apiItem = (apiUrl + 'oba_item')
  
+let betalingen = [2]
+
 // Home pagina
 app.get('/', function(request, response) {
     // console.log(savedItems)c
@@ -51,24 +53,64 @@ app.get('/uitleningen', function(request, response){
     })
 })
 
-// betalingen site
-app.get('/betalingen', function(request, response){
-    fetchJson('https://fdnd-agency.directus.app/items/oba_item')
-        .then((itemsDataUitDeAPI) => {
-            // Check if itemsDataUitDeAPI.data is an array
-            if (Array.isArray(itemsDataUitDeAPI.data)) {
-                response.render('betalingen', {
-                    items: itemsDataUitDeAPI.data
-                });
-            } else {
-                console.error("Invalid data format from API");
-                response.status(500).send("Internal Server Error: Invalid data format");
-            }
-        })
+
+// Betalingen site
+app.get('/betalingen', (request, response) => {
+  fetchJson('https://fdnd-agency.directus.app/items/oba_item').then((itemsDataFromAPI) => {
+
+    response.render('betalingen', { items: itemsDataFromAPI.data, betalingen });
+  }).catch(error => {
+    console.error("Error fetching data from API:", error);
+    response.status(500).send("Internal Server Error");
+  });
 });
 
 
+// app.post('/betalingen', (request, response) => {
 
+//   const itemId = request.body.itemId;
+
+//   betalingen[itemId] = true;
+
+//   response.redirect('/betalingen');
+
+//   fetchJson('https://fdnd-agency.directus.app/items/oba_item')
+//    .then((itemsDataFromAPI) => {
+
+//        const itemsBetaald = itemsDataFromAPI.data.filter(item => betalingen[item.id]);
+
+//        if (itemsBetaald.length) {
+      
+//            response.render('betalingen', { items: itemsBetaald });
+//        } else {
+//            console.error("Invalid or unexpected API response format");
+//            response.status(500).send("Internal Server Error");
+//        }
+//    })
+// });
+
+
+app.get('/betalingen', (request, response) => {
+    fetchJson('https://fdnd-agency.directus.app/items/oba_item')
+        .then((itemsDataFromAPI) => {
+            response.render('betalingen', { items: itemsDataFromAPI.data, betalingen });
+        })
+        .catch(error => {
+            console.error("Error fetching data from API:", error);
+            response.status(500).send("Internal Server Error");
+        });
+});
+
+app.post('/betalingen', (request, response) => {
+    const itemId = request.body.itemId;
+    betalingen[itemId] = true;
+
+    if (request.headers['accept'] && request.headers['accept'].includes('application/json')) {
+        response.json({ success: true });
+    } else {
+        response.redirect('/betalingen');
+    }
+});
 
 
 

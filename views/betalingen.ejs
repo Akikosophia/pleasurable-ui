@@ -5,19 +5,42 @@
     <h3>U heeft 3 betalingen:</h3>
     <% items.forEach(item=> { %>
         <article>
-            <img src="https://fdnd-agency.directus.app/assets/<%= item.afbeelding %>" alt="">
-            <p>U bent 3 dagen laat voor inleveren</p>
-            <p>Betaal binnen 1 week om te voorkomen dat er meer kosten bij komen!!</p>
-
-            <form action="/betalingen" method="post" name="betalingen">
+            <!-- <h1><%= item.id %></h1> -->
+            <img src="https://fdnd-agency.directus.app/assets/<%= item.afbeelding %>" class="animated-image" alt="">
+            <div class="text"> 
+            <p class="animated-text">U bent 3 dagen laat voor inleveren</p>
+            <p class="animated-text">Betaal binnen 1 week om te voorkomen dat er meer kosten bij komen!!</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="warning-light-svg" fill="#ff0000" width="50px"
+                height="50px">
+                <circle cx="12" cy="12" r="10" fill="#fff" opacity="0.2" />
+                <path
+                    d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-11h2v6h-2zm0 8h2v2h-2z">
+                
+                    <animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" values="0;1;0" />
+                </path>
+            </svg>
+            </div>
+            
+            <form action="/betalingen" method="post" class="betaal-form" name="betalingen">
                 <input type="hidden" name="itemId" value="<%= item.id %>">
-                <div>
-                    <label for="kosten">Kosten:</label>
-                    <input type="text" id="kosten" name="kosten" value="2 Euro" readonly>
-                </div>
-                <button type="submit">Betaal</button>
-            </form>
+                <% if (betalingen[item.id]) { %>
+                  Is betaald..
+                  <div class="checkmark-container">
+                    <svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30">
+                      <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2" />
+                    </svg>
+                  </div>
+                <% } else { %>
+                  <div>
+                    <label for="kosten-<%= item.id %>">Kosten:</label>
+                    <input type="text" id="kosten-<%= item.id %>" name="kosten" value="2 Euro" readonly>
+                  </div>
+                  <button class="beep-btn" id="btn" type="submit">Betaal</button>
 
+                    <audio id="beep-sound" src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/multimedia_button_click_012.mp3" preload="auto"></audio>
+                <% } %>
+              </form>
+              
         </article>
         <% }) %>
 
