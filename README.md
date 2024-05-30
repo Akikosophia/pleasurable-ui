@@ -19,6 +19,14 @@ Onze opdrachtgever voor Oba is Mark Vos
 
 ## Beschrijving
 De opdracht is om de website pleasurable te maken
+
+Userstory:
+De gebruiker wil in een opslag wat informatie kunnen zien van de familie leden.
+
+-Boetes, Abonnement type, Gegevens.
+-Beschikbaarheid van het boek.
+-De informatie moet ook in en uitgeklapt kunnen worden
+
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
