@@ -28,6 +28,13 @@ De gebruiker wil in een opslag wat informatie kunnen zien van de familie leden.
 *De informatie moet ook in en uitgeklapt kunnen worden
 
 Screenshots
+
+### Hover state notificatie bel (hij beweegt ook bij de hover state)
+<img width="378" alt="Scherm­afbeelding 2024-05-29 om 14 48 27" src="https://github.com/Akikosophia/pleasurable-ui/assets/144008863/b16dcd37-a810-4b27-9ddc-8641cdd353b8">
+
+### Wanneer je op de notificatie button klikt krijg je een pop over van de beschikbare boeken
+<img width="378" alt="Scherm­afbeelding 2024-05-29 om 14 49 21" src="https://github.com/Akikosophia/pleasurable-ui/assets/144008863/a5868817-20ae-447c-8406-57c39b951cad">
+
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
