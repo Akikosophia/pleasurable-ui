@@ -87,9 +87,9 @@ forms.forEach(function(form) {
 
         const beepSound = document.querySelector('#beep-sound');
         beepSound.play();
-        
+
         try {
-            event.preventDefault(); // Prevent default form submission behavior
+            event.preventDefault(); 
 
             const formData = new FormData(form);
             const itemId = formData.get("itemId");

@@ -42,13 +42,13 @@ img {
 }
 
 .animated-image {
-    opacity: 0.7; /* Initial opacity */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    opacity: 0.7; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .animated-image:hover {
-    opacity: 1; /* Fully visible on hover */
-    transform: scale(1.1); /* Scale up on hover */
+    opacity: 1; 
+    transform: scale(1.1);
 }
 
 p {
@@ -138,7 +138,7 @@ body {
 }
 
 .text {
-    position: relative; /* Ensure the text container is a relative positioning context */
+    position: relative; 
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -152,10 +152,10 @@ body {
 
 .warning-light-svg {
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+    top: 10px; 
+    right: 10px; 
+    width: 30px; 
+    height: 30px;
 }
 
 .text p {
@@ -163,7 +163,7 @@ body {
 }
 
 .container {
-    position: relative; /* Ensure the container is a relative positioning context */
+    position: relative; 
     max-width: 600px;
     width: 100%;
     background-color: white;
